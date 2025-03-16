@@ -93,99 +93,101 @@ good to go!
 
 #include <iostream>
 
+FIXME: correct the indentation to be 4 spaces. use command-[ and ] to adjust each line's indentation
+
 struct FloatType
 {
-        float add(float lhs, float rhs );
-        float subtract( float lhs, float rhs );
-        float multiply( float lhs, float rhs );
-        float divide( float lhs, float rhs );
+float add(float lhs, float rhs );
+float subtract( float lhs, float rhs );
+float multiply( float lhs, float rhs );
+float divide( float lhs, float rhs );
 };
 
 float FloatType::add(float lhs, float rhs )
 {
-        return lhs + rhs;        
+return lhs + rhs;        
 }
 float FloatType::subtract( float lhs, float rhs )
 {
-        return lhs - rhs;        
+return lhs - rhs;        
 }
 float FloatType::multiply( float lhs, float rhs )
 {
-        return lhs * rhs;        
+return lhs * rhs;        
 }
 float FloatType::divide( float lhs, float rhs )
 {
-        if (rhs >= 0.0f && rhs <= 0.0f)        // I think using == should be fine for this use case
-        {                                // but I understand why the "it's unsafe" warning is thrown.
-                std::cout << "warning, floating point division by zero returns 'inf' !\n";
-        }
-        return lhs / rhs;
+if (rhs >= 0.0f && rhs <= 0.0f)        // I think using == should be fine for this use case
+{                                // but I understand why the "it's unsafe" warning is thrown.
+std::cout << "warning, floating point division by zero returns 'inf' !\n";
+}
+return lhs / rhs;
 }
 
 struct DoubleType
 {
-        double add( double lhs, double rhs );
-        double subtract( double lhs, double rhs );
-        double multiply( double lhs, double rhs );
-        double divide( double lhs, double rhs );
+double add( double lhs, double rhs );
+double subtract( double lhs, double rhs );
+double multiply( double lhs, double rhs );
+double divide( double lhs, double rhs );
 };
 
 double DoubleType::add( double lhs, double rhs )
 {
-        return lhs + rhs;
+return lhs + rhs;
 }
 
 double DoubleType::subtract( double lhs, double rhs )
 {
-        return lhs - rhs;        
+return lhs - rhs;        
 }
 
 double DoubleType::multiply( double lhs, double rhs )
 {
-        return lhs * rhs;
+return lhs * rhs;
 }
 
 double DoubleType::divide( double lhs, double rhs )
 {
-        if (rhs >= 0.0 && rhs <= 0.0)
-        {
-                std::cout << "warning, floating point division by zero returns 'inf' !\n";
-        }
-        return lhs / rhs;
+if (rhs >= 0.0 && rhs <= 0.0)
+{
+std::cout << "warning, floating point division by zero returns 'inf' !\n";
+}
+return lhs / rhs;
 }
 
 struct IntType
 {
-        int add( int lhs, int rhs );
-        int subtract( int lhs, int rhs );
-        int multiply( int lhs, int rhs );
-        int divide( int lhs, int rhs );
+int add( int lhs, int rhs );
+int subtract( int lhs, int rhs );
+int multiply( int lhs, int rhs );
+int divide( int lhs, int rhs );
 };
 
 int IntType::add( int lhs, int rhs )
 {
-        return lhs + rhs;
+return lhs + rhs;
 }
 
 int IntType::subtract( int lhs, int rhs )
 {
-        return lhs - rhs;
+return lhs - rhs;
 }
 
 int IntType::multiply( int lhs, int rhs )
 {
-        return lhs * rhs;
+return lhs * rhs;
 }
 
 int IntType::divide( int lhs, int rhs )
 {
-        if (rhs == 0)
-        {
-                std::cout << "error, integer division by zero will crash the program!\n";
-                std::cout << "returning lhs\n";
-                return lhs;
-        }
-        return lhs / rhs;
+if (rhs == 0)
+{
+std::cout << "error, integer division by zero will crash the program!\n";
+std::cout << "returning lhs\n";
+return lhs;
+}
+return lhs / rhs;
 }
 
 int main() 
