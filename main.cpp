@@ -115,7 +115,7 @@ float FloatType::multiply( float lhs, float rhs )
 }
 float FloatType::divide( float lhs, float rhs )
 {
-        if (rhs >= 0 && rhs <= 0)        // I think using == should be fine for this use case
+        if (rhs >= 0.0f && rhs <= 0.0f)        // I think using == should be fine for this use case
         {                                // but I understand why the "it's unsafe" warning is thrown.
                 std::cout << "warning, floating point division by zero returns 'inf' !\n";
         }
@@ -147,7 +147,7 @@ double DoubleType::multiply( double lhs, double rhs )
 
 double DoubleType::divide( double lhs, double rhs )
 {
-        if (rhs >= 0 && rhs <= 0)
+        if (rhs >= 0.0 && rhs <= 0.0)
         {
                 std::cout << "warning, floating point division by zero returns 'inf' !\n";
         }
